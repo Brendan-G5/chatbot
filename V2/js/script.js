@@ -164,6 +164,7 @@ function check_response(message){
     return respond(questionSentences[num]);
   }
 
+  //Used in response to a "!"
   if (message.indexOf("!")>=0){
     var num = Math.floor(Math.random()*excitedSentences.length);
     return respond(excitedSentences[num]);
@@ -265,7 +266,7 @@ var excitedTriggers = ["wow","cool","exciting", "excellent"];
 var excitedSentences = ["Yeah! Very Cool", "So exciting!","That's great"];
 
 var favouriteTriggers = ["favourite","favorite"];
-var favouriteSentences = ["That's a tough one, im not sure. Too many to choose from."]
+var favouriteSentences = ["That's a tough one, im not sure. Too many to choose from."];
 
 //A collection of all existing simple Triggers and Sentences pairs, allows them to be run in a for loop
 var simpleTriggers = [whatsUpTriggers, greatingTriggers, howAreYouTriggers, laughTriggers, talkAboutTriggers, helpTriggers, insultTriggers, excitedTriggers, favouriteTriggers];

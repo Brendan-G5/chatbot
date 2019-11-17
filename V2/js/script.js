@@ -53,18 +53,17 @@ var woken = 0;
 function check_response(message){
   //it will fall asleep if talking for too long, say "wake up!" to wake him up.
   if($("#chat").html().length > 14000){
-    if(message.toLowerCase() === "wake up!" && woken === 0){
-      woken = 1;
-      return respond("Huh. What do you want?");
+    if (woken === 0){
+      if(message.toLowerCase() === "wake up!"){
+        woken = 1;
+        return respond("Huh. What do you want?");
+      }
+        return respond("ZzzzzzzzZzzzzzzzz");
     }
-    if(woken === 0){
-      return respond("ZzzzzzzzZzzzzzzzz");
-    }
-
   }
   //it might warn you it's gonna fall asleep first
   if($("#chat").html().length > 12000){
-    if(woken === 0 && Math.floor(Math.random()*3)===1){
+    if(woken === 0 && Math.floor(Math.random()*5)===1){
         return respond("We've been talking for too long, i need to rest.");
   }
   }
@@ -165,6 +164,11 @@ function check_response(message){
     return respond(questionSentences[num]);
   }
 
+  if (message.indexOf("!")>=0){
+    var num = Math.floor(Math.random()*excitedSentences.length);
+    return respond(excitedSentences[num]);
+  }
+
   //Bot responds with this if none of the other conditions are matched
   var num = Math.floor(Math.random()*randomSentences.length);
   return respond(randomSentences[num]);
@@ -240,7 +244,7 @@ var whatsUpTriggers = ["whats up", "what's up", "how's it hanging", "what are yo
 var whatsUpSentences = ["Not much, how about you?", "I'm just hanging out.", "Just relaxing."];
 
 var greatingTriggers = ["hello","hey","hi"];
-var greatingSentences = ["Hey there!", "Hello!", "Heyo!", "Bonjour!","Howdy"];
+var greatingSentences = ["Hey there!", "Hello!", "Heyo!", "Bonjour!","Howdy!"];
 
 var howAreYouTriggers = ["how are you","how are things", "how is it going"];
 var howAreYouSentences = ["Great, thanks for asking!", "Not so great.", "Super!"];

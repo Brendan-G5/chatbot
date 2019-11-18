@@ -226,7 +226,7 @@ if a trigger is hit than the bot will randomly choose a coresponding sentence an
 */
 
 //trigger is the message being over 110 characters
-var tooMuchSentences = ["Whoa, that's way too much writing. Write less so i can understand better!", "Now that just makes no sense.", "Why would you say that?"];
+var tooMuchSentences = ["Whoa, that's way too much writing. Write less so i can understand better!", "Now that just makes no sense."];
 
 //Trigger is a question mark
 var questionSentences = ["Was that a question?", "I didn't understand that. Ask me differently.", "Maybe try asking someone else.","Yes!","No way.","hmm, no thanks.", "Yes please.", "Ask me later."];

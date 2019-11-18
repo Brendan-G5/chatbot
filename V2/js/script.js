@@ -24,7 +24,7 @@ $("#send").click(function(){
 }
 
 });
-//When on the textbox, and enter key is pressed it is as if send was pressed. Also prevents enter from having original effect
+//When on the textbox, and enter key is pressed it is as if send was pressed. Also prevents enter from having original effect (new line)
 $("#textbox").keypress(function(event){
   if( event.which ==13){
     $("#send").click();
@@ -185,7 +185,6 @@ function respond(message){
   var time = get_time();
 
   $("#chat").html(chatSoFar +"<br><span class='current_message bot'><span class ='speech-bubble-bot'>"+ message+"</span><br><span class = 'time'>"+ time +"</span></span><br>");
-  $(".current_message").hide();
   $(".current_message").fadeIn();
   $(".current_message").removeClass("current_message");
   $("#chat").scrollTop($("#chat").prop("scrollHeight"));

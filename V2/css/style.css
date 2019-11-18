@@ -10,9 +10,7 @@ html{
 }
 
 #header>h2{
-  padding:10px;
   color: #F2F3F4;
-  align: center;
   text-align: center;
 }
 
@@ -22,7 +20,7 @@ body{
 
 #chat{
   overflow: auto;
-  max-width:800px;
+  width:800px;
   height: 500px;
   background-color: #EAECEE;
   margin: 0px auto;
@@ -51,6 +49,7 @@ textarea{
   position: absolute;
   height: 35px;
 }
+
 #send:hover{
   background-color: #D5D8DC;
 }
@@ -69,18 +68,19 @@ textarea{
   word-wrap: break-word;
   float: left;
 }
+
 .speech-bubble-you {
-	position: relative;
-	background: #FCF3CF;
-	border-radius: .4em;
+  position: relative;
+  background: #FCF3CF;
+  border-radius: .4em;
   padding-bottom: 2px;
   margin-right: 5px
 }
 
 .speech-bubble-bot {
-	position: relative;
-	background: #D5F5E3;
-	border-radius: .4em;
+  position: relative;
+  background: #D5F5E3;
+  border-radius: .4em;
   padding-bottom: 2px;
   margin-left: 5px;
 }

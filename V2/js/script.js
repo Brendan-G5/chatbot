@@ -5,33 +5,30 @@ $(function(){
   Creates a new piece of html to be added and adds it below the existing html
   Scrolls to bottom of page. Last step is to send new message to bot to check for a progammed response.
   */
-$("#send").click(function(){
-  if($("#textbox").val() !== ""){
-  var newMessage = $("#textbox").val();
-  $("#textbox").val("");
-  var chatHistory = $("#chat").html();
-  if(chatHistory.length > 3){
-    chatHistory = chatHistory + "<br>";
-  }
-  var time = get_time();
+  $("#send").click(function(){
+    if($("#textbox").val() !== ""){
+      var newMessage = $("#textbox").val();
+      $("#textbox").val("");
+      var chatHistory = $("#chat").html();
+      if(chatHistory.length > 3){
+        chatHistory = chatHistory + "<br>";
+      }
 
-  var display = "<span class = 'you'><span class = 'speech-bubble-you' >" + newMessage + "</span><br><span class = 'time'>"+ time +"</span></span><br>";
-  $("#chat").html(chatHistory + display);
-  $("#chat").scrollTop($("#chat").prop("scrollHeight"));
+      var time = get_time();
+      var display = "<span class = 'you'><span class = 'speech-bubble-you' >" + newMessage + "</span><br><span class = 'time'>"+ time +"</span></span><br>";
+      $("#chat").html(chatHistory + display);
+      $("#chat").scrollTop($("#chat").prop("scrollHeight"));
 
-  check_response(newMessage);
-
-}
-
-});
-//When on the textbox, and enter key is pressed it is as if send was pressed. Also prevents enter from having original effect (new line)
-$("#textbox").keypress(function(event){
-  if( event.which ==13){
-    $("#send").click();
-    event.preventDefault();
-  }
-});
-
+      check_response(newMessage);
+    }
+  });
+  //When on the textbox, and enter key is pressed it is as if send was pressed. Also prevents enter from having original effect (new line)
+  $("#textbox").keypress(function(event){
+    if(event.which ==13){
+      $("#send").click();
+      event.preventDefault();
+    }
+  });
 });
 
 
@@ -58,14 +55,14 @@ function check_response(message){
         woken = 1;
         return respond("Huh. What do you want?");
       }
-        return respond("ZzzzzzzzZzzzzzzzz");
+      return respond("ZzzzzzzzZzzzzzzzz");
     }
   }
   //it might warn you it's gonna fall asleep first
   if($("#chat").html().length > 12000){
     if(woken === 0 && Math.floor(Math.random()*5)===1){
-        return respond("We've been talking for too long, i need to rest.");
-  }
+      return respond("We've been talking for too long, i need to rest.");
+    }
   }
 
   //Section for telling a knock knock joke.
@@ -92,7 +89,7 @@ function check_response(message){
   //responds if message is over 110 characters
   if (message.length > 110){
     var num = Math.floor(Math.random()*tooMuchSentences.length);
-     return respond(tooMuchSentences[num]);
+    return respond(tooMuchSentences[num]);
   }
   //responds if message is less than 2 characters
   if (message.length < 2){
@@ -154,8 +151,8 @@ function check_response(message){
   for (var i = 0; i<simpleTriggers.length; i++){
     if (new RegExp(simpleTriggers[i].join("|")).test(message.toLowerCase())){
       var num = Math.floor(Math.random()*simpleSentences[i].length);
-       return respond(simpleSentences[i][num]);
-     }
+      return respond(simpleSentences[i][num]);
+    }
   };
 
   //Used if used asks a question but none of the questions above
@@ -262,7 +259,7 @@ var insultTriggers = ["What can you do", "suck","useless","no sense","any sense"
 var insultSentences = ["Well i'd like to see you try and do better","That's just mean","Why would you say that, so rude", "That's mean "+name];
 
 var excitedTriggers = ["wow","cool","exciting", "excellent"];
-var excitedSentences = ["Yeah! Very Cool", "So exciting!","That's great"];
+var excitedSentences = ["Yeah! Very Cool!", "So exciting!","That's great!"];
 
 var favouriteTriggers = ["favourite","favorite"];
 var favouriteSentences = ["That's a tough one, im not sure. Too many to choose from."];

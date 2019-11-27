@@ -261,7 +261,7 @@ var insultSentences = ["Well i'd like to see you try and do better","That's just
 var excitedTriggers = ["wow","cool","exciting", "excellent"];
 var excitedSentences = ["Yes! Very Cool!", "So exciting!","That's great!"];
 
-var favouriteTriggers = ["favourite","favorite"];
+var favouriteTriggers = ["favourite","favorite", "which"];
 var favouriteSentences = ["That's a tough one, im not sure. Too many to choose from."];
 
 //A collection of all existing simple Triggers and Sentences pairs, allows them to be run in a for loop

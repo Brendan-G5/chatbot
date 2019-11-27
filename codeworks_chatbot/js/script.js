@@ -246,13 +246,13 @@ var greatingSentences = ["Hey there!", "Hello!", "Heyo!", "Bonjour!","Howdy!"];
 var howAreYouTriggers = ["how are you","how are things", "how is it going"];
 var howAreYouSentences = ["Great, thanks for asking!", "Not so great.", "Super!"];
 
-var laughTriggers = ["joke","haha","funny"];
+var laughTriggers = ["joke","haha","funny", "laugh"];
 var laughSentences = ["Hahahaha, good one!","That's not funny.", "What's so funny?"];
 
 var talkAboutTriggers = ["talk","bored","know", "fact"];
 var talkAboutSentences= ["The coldest natural temperature ever recorded on earth was -89.2 degrees celcius.","Did you know a baby puffin is called a 'puffling'.", "The unicorn is the national animal of Scotland."];
 
-var helpTriggers = ["help","lost","confused"];
+var helpTriggers = ["help me","lost","confused"];
 var helpSentences = ["Honestly, there's not much I can do to help.", "I don't know how to help."]
 
 var insultTriggers = ["What can you do", "suck","useless","no sense","any sense","bad","broken","don't work", "stink","loser"]

@@ -258,7 +258,7 @@ var helpSentences = ["Honestly, there's not much I can do to help.", "I don't kn
 var insultTriggers = ["What can you do", "suck","useless","no sense","any sense","bad","broken","don't work", "stink","loser"]
 var insultSentences = ["Well i'd like to see you try and do better","That's just mean","Why would you say that, so rude", "That's mean "+name];
 
-var excitedTriggers = ["wow","cool","exciting", "excellent", "great"];
+var excitedTriggers = ["wow","cool","exciting", "excellent"];
 var excitedSentences = ["Yeah! Very Cool!", "So exciting!","That's great!"];
 
 var favouriteTriggers = ["favourite","favorite"];

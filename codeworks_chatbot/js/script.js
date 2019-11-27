@@ -246,7 +246,7 @@ var greatingSentences = ["Hey there!", "Hello!", "Heyo!", "Bonjour!","Howdy!"];
 var howAreYouTriggers = ["how are you","how are things", "how is it going"];
 var howAreYouSentences = ["Great, thanks for asking!", "Not so great.", "Super!"];
 
-var laughTriggers = ["joke","haha","funny", "laugh"];
+var laughTriggers = ["joke","haha","funny", "laugh","ahah"];
 var laughSentences = ["Hahahaha, good one!","That's not funny.", "What's so funny?"];
 
 var talkAboutTriggers = ["talk","bored","know", "fact"];

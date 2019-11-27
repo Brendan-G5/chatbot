@@ -240,7 +240,7 @@ var howOldAreYouTriggers = ["how old are you", "age"];
 var whatsUpTriggers = ["whats up", "what's up", "how's it hanging", "what are you up to"];
 var whatsUpSentences = ["Not much, how about you?", "I'm just hanging out.", "Just relaxing."];
 
-var greatingTriggers = ["hello","hey","hi"];
+var greatingTriggers = ["hello","hey","hi","howdy"];
 var greatingSentences = ["Hey there!", "Hello!", "Heyo!", "Bonjour!","Howdy!"];
 
 var howAreYouTriggers = ["how are you","how are things", "how is it going"];

@@ -117,7 +117,7 @@ function check_response(message){
     }
     name = message;
     nameAsk = 2;
-    return respond("Nice to meet you "+message+".");
+    return respond("Nice to meet you "+name+".");
   }
 
   if (nameAsk ===2){
